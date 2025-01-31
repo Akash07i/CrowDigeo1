@@ -11,39 +11,6 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-// app.use(express.json());
-// const_dirname=path.dirname("")
-// const buildpath = path.join(_dirname,"../frontend/build")
-// app.use(express.static(buildpath));
-// app.use(
-// cors({
-//     "origin": "*",
-// })
-// );
-// app.use(productroutes);
-// app.use(userroutes);
-
-// const express = require('express');
-// const path = require('path');
-
-// // const app = express();
-
-// // Serve static files from the React app
-// app.use(express.static(path.join(__dirname, 'build')));
-
-// // Handles all requests by serving the index.html from the build folder
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
-
-// const port = process.env.PORT || 5000;
-// app.listen(port, () => {
-//   console.log(`Server is running on port ${port}`);
-// });
-
-
-
-
 // Set up the app
 const app = express();
 
@@ -70,24 +37,12 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // MongoDB connection
-
-// const mongoose = require('mongoose');
-
-const uri = 'mongodb+srv://Akash07i:Akash@17001@cluster0.bb241.mongodb.net/crowdig?retryWrites=true&w=majority&appName=Cluster0';
-
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log('MongoDB connection error:', err));
-
-  
-
-
-// mongoose.connect('mongodb://localhost:27017/crowdig', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// })
-//   .then(() => console.log('MongoDB connected'))
-//   .catch(err => console.log(err));
+mongoose.connect('mongodb://localhost:27017/crowdig', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 // Serve images from the 'uploads' folder
 app.use('/uploads', express.static('uploads'));
