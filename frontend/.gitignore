@@ -1,0 +1,47 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build Directories
+dist/
+
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Dependency directories
+node_modules/
+
+# Editor Directories and Files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignore Git
+.git/
+
+<<<<<<< HEAD
+# temporary files
+=======
+# Public and temporary files
+>>>>>>> 184e09c2a1a80b0167e97bdad9821d1e67fac0b9
+temp/
