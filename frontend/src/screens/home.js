@@ -3,6 +3,7 @@ import Carou from "../components/carsole";
 import IdeaSection from "../components/conste";
 import Cards from "../components/cards";
 import Footer from "../components/Footer";
+// import Ideator from "../pages/Idea";
 const Home=()=>{
 
 
@@ -13,6 +14,7 @@ const Home=()=>{
     <IdeaSection/>
     <Cards/>
     <Footer />
+    {/* <Ideator></Ideator> */}
 </div>
     )
 }

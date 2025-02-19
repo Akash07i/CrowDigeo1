@@ -60,7 +60,7 @@ const RegistrationPage = () => {
     }
 
     try {
-      const response = await axios.post('https://crowdiego-backend.onrender.com/api/register', formDataToSend, {
+      const response = await axios.post('http://localhost:5000/api/register', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
