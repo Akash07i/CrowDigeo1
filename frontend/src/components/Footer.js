@@ -1,199 +1,138 @@
-import React from 'react';
+import React from "react";
+import { Container, Grid, Typography, Link, Box, Divider } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GoogleIcon from "@mui/icons-material/Google";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      {/* Footer Middle Section */}
-      <div className="footer-middle">
-        <div className="container">
-          <div className="row">
-            {/* First Column: Logo and Social Links */}
-            <div className="f-box f-box-01">
-              <img
-                src="https://www.crowdiego.com/images/logo.png" // Replace with your logo
-                alt="Crowdiego Logo"
-                className="footer-logo"
-              />
-              <div className="f-social-box">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-linkedin"></i>
-                </a>
-                <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-google-plus"></i>
-                </a>
-              </div>
-            </div>
+    <Box sx={{ bgcolor: "#f8f9fa", color: "#666", py: 4, mt: 4 }}>
+      <Container maxWidth="lg">
+        {/* Logo and Social Icons */}
+        <Box textAlign="center" mb={3}>
+          <Typography
+            variant="h5"
+            sx={{ fontWeight: "bold", fontFamily: "'Pacifico', cursive", color: "#ccc" }}
+          >
+            Crowdiego
+          </Typography>
+          <Box sx={{ mt: 1 }}>
+            <Link href="#" sx={{ mx: 1, color: "#3b5998" }}>
+              <FacebookIcon fontSize="large" />
+            </Link>
+            <Link href="#" sx={{ mx: 1, color: "#1DA1F2" }}>
+              <TwitterIcon fontSize="large" />
+            </Link>
+            <Link href="#" sx={{ mx: 1, color: "#0077b5" }}>
+              <LinkedInIcon fontSize="large" />
+            </Link>
+            <Link href="#" sx={{ mx: 1, color: "#db4437" }}>
+              <GoogleIcon fontSize="large" />
+            </Link>
+          </Box>
+        </Box>
 
-            {/* Second Column: Crowdiego Links */}
-            <div className="f-box f-box-02">
-              <h6>Crowdiego</h6>
-              <ul className="footer-links">
-                <li><a href="/about-us">What</a></li> {/* Valid link */}
-                <li><a href="/about-us">Who we are</a></li> {/* Valid link */}
-                <li><a href="/career">Career</a></li> {/* Valid link */}
-                <li><a href="/featured-projects">Featured Projects</a></li> {/* Valid link */}
-              </ul>
-            </div>
+        <Divider sx={{ my: 3 }} />
 
-            {/* Third Column: Other Links */}
-            <div className="f-box f-box-03">
-              <h6>Other</h6>
-              <ul className="footer-links">
-                <li><a href="/faqs">FAQs</a></li> {/* Valid link */}
-                <li><a href="/how-it-works">How it works</a></li> {/* Valid link */}
-                <li><a href="/trust-safety">Trust & Safety</a></li> {/* Valid link */}
-                <li><a href="/support">Support</a></li> {/* Valid link */}
-              </ul>
-            </div>
+        {/* Footer Links */}
+        <Grid container spacing={3} justifyContent="center">
+          {/* Column 1 - Crowdiego */}
+          <Grid item xs={12} sm={4} md={3}>
+            <Typography variant="h6" color="primary" gutterBottom>
+              Crowdiego
+            </Typography>
+            <Link href="#" color="inherit" display="block">
+              What
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Who we are
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Career
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Featured Projects
+            </Link>
+          </Grid>
 
-            {/* Fourth Column: Categories */}
-            <div className="f-box f-box-04">
-              <h6>Categories</h6>
-              <ul className="footer-links">
-                <li><a href="/categories/art">Art</a></li> {/* Valid link */}
-                <li><a href="/categories/comics">Comics</a></li> {/* Valid link */}
-                <li><a href="/categories/crafts">Crafts</a></li> {/* Valid link */}
-                <li><a href="/categories/dance">Dance</a></li> {/* Valid link */}
-                <li><a href="/categories/design">Design</a></li> {/* Valid link */}
-              </ul>
-              <ul className="footer-links">
-                <li><a href="/categories/fashion">Fashion</a></li> {/* Valid link */}
-                <li><a href="/categories/film-video">Film & Video</a></li> {/* Valid link */}
-                <li><a href="/categories/food">Food</a></li> {/* Valid link */}
-                <li><a href="/categories/games">Games</a></li> {/* Valid link */}
-                <li><a href="/categories/journalism">Journalism</a></li> {/* Valid link */}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+          {/* Column 2 - Other */}
+          <Grid item xs={12} sm={4} md={3}>
+            <Typography variant="h6" color="primary" gutterBottom>
+              Other
+            </Typography>
+            <Link href="#" color="inherit" display="block">
+              FAQs
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              How it works
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Trust & Safety
+            </Link>
+            <Link href="#" color="inherit" display="block">
+              Support
+            </Link>
+          </Grid>
 
-      {/* Footer Bottom Section */}
-      <div className="footer-bottom">
-        <div className="container">
-          <div className="row">
-            {/* Copyright Left */}
-            <div className="copyright-left">
-              <ul className="footer-links">
-                <li><a href="/terms-conditions">Terms & Conditions</a></li> {/* Valid link */}
-                <li><a href="/privacy-policy">Privacy Policy</a></li> {/* Valid link */}
-                <li><a href="/cookie-policy">Cookie Policy</a></li> {/* Valid link */}
-              </ul>
-            </div>
+          {/* Column 3 - Categories */}
+          <Grid item xs={12} sm={4} md={3}>
+            <Typography variant="h6" color="primary" gutterBottom>
+              Categories
+            </Typography>
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <Link href="#" color="inherit" display="block">
+                  Art
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Comics
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Crafts
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Dance
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Design
+                </Link>
+              </Grid>
+              <Grid item xs={6}>
+                <Link href="#" color="inherit" display="block">
+                  Fashion
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Film & Video
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Food
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Games
+                </Link>
+                <Link href="#" color="inherit" display="block">
+                  Journalism
+                </Link>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
 
-            {/* Copyright Right */}
-            <div className="copyright-right">
-              <ul className="footer-links">
-                <li>&copy; 2018 Crowdiego. All rights reserved</li>
-                <li>Crafted by <a href="/insta-solutions">Insta Solutions</a></li> {/* Valid link */}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Internal CSS for styling */}
-      <style jsx>{`
-        .footer {
-          background-color: #f1f1f1;
-          padding: 50px 0;
-          color: #333;
-        }
-
-        .footer-middle {
-          padding-bottom: 20px;
-        }
-
-        .footer-logo {
-          width: 150px;
-        }
-
-        .f-social-box {
-          margin-top: 15px;
-        }
-
-        .f-social-box a {
-          margin: 0 10px;
-          color: #333;
-          font-size: 20px;
-        }
-
-        .f-social-box a:hover {
-          color: #008cba;
-        }
-
-        .f-box {
-          margin-bottom: 20px;
-        }
-
-        .f-box h6 {
-          font-size: 18px;
-          font-weight: bold;
-          color: #333;
-        }
-
-        /* Use Flexbox for layout */
-        .footer-links {
-          display: flex;
-          flex-wrap: wrap;
-          padding-left: 0;
-          list-style: none;
-        }
-
-        .footer-links li {
-          margin-right: 20px;
-          margin-bottom: 10px;
-        }
-
-        .footer-links li a {
-          text-decoration: none;
-          color: #333;
-        }
-
-        .footer-links li a:hover {
-          color: #008cba;
-        }
-
-        .footer-bottom {
-          background-color: #333;
-          padding: 20px 0;
-          color: #fff;
-        }
-
-        .footer-bottom .copyright-left,
-        .footer-bottom .copyright-right {
-          display: inline-block;
-          width: 50%;
-          text-align: center;
-        }
-
-        .footer-bottom ul {
-          padding-left: 0;
-          list-style: none;
-        }
-
-        .footer-bottom ul li {
-          display: inline;
-          margin-right: 20px;
-        }
-
-        .footer-bottom ul li a {
-          text-decoration: none;
-          color: #fff;
-        }
-
-        .footer-bottom ul li a:hover {
-          color: #008cba;
-        }
-      `}</style>
-    </footer>
+        {/* Bottom Section */}
+        <Divider sx={{ my: 3 }} />
+        <Box textAlign="center">
+          <Typography variant="body2" color="textSecondary">
+            Terms & Conditions | Privacy Policy | Cookie Policy
+          </Typography>
+          <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
+            © 2018 Crowdiego. All rights reserved | Crafted by Insta Solutions
+          </Typography>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
 export default Footer;
+

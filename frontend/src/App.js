@@ -8,6 +8,8 @@ import ProfileCard from './pages/Profilecard';
 import ProfilePage from './pages/MakerProfile';
 // import Ideator from './pages/Idea';
 import Ideator from './pages/Idea';
+import PusherPage from './pages/pusherpage';
+import IdeatorProfileForm from './components/IdeatorProfile/IdeatorProfileForm';
 function App() {
   return (
     <Router>
@@ -20,6 +22,8 @@ function App() {
         <Route path="/ProfilePage" element={<ProfilePage />} />
         {/* <Route path='/idea' element={<Ideator />}/> */}
         <Route path='/idea' element={<Ideator />}/>
+        <Route path='/pusherpage' element={<PusherPage />}/> 
+        <Route path='/IdeatorProfileForm' element={<IdeatorProfileForm />}/>       
       </Routes>
     </Router>
   );

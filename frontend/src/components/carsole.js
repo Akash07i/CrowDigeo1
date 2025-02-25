@@ -268,7 +268,7 @@ function Carou() {
                   <p>Backers</p>
                   <div className="d-flex justify-content-center">
                     {users.filter(user => user.role === 'Backer').map((user, index) => (
-                      <Link to={`/profilecard`} key={index}> {/* Wrap in Link for navigation */}
+                      <Link to={`/Profilecard`} key={index}> {/* Wrap in Link for navigation */}  
                         <img
                           src={user.profileImage || 'http://localhost:5000/uploads/default.jpg'} // Default fallback if image is missing
                           alt="user"
@@ -285,7 +285,7 @@ function Carou() {
                   <p>Pushed by</p>
                   <div className="d-flex justify-content-center">
                     {users.filter(user => user.role === 'Pusher').map((user, index) => (
-                      <Link to={`/profilecard`} key={index}> {/* Wrap in Link for navigation */}
+                      <Link to={`/pusherpage`} key={index}> {/* Wrap in Link for navigation */}
                         <img
                           src={user.profileImage || 'http://localhost:5000/default.jpg'} // Default fallback if image is missing
                           alt="user"
