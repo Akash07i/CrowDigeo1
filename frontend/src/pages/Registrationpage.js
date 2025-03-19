@@ -60,7 +60,7 @@ const RegistrationPage = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/register', formDataToSend, {
+      const response = await axios.post('https:// 3.109.1.93/api/register', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

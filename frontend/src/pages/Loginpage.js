@@ -27,7 +27,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', formData);
+      const response = await axios.post('https:// 3.109.1.93/api/login', formData);
 
       // Save the JWT token and user data in localStorage
       localStorage.setItem('authToken', response.data.token);

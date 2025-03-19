@@ -18,8 +18,9 @@ const Cards = () => {
       progress: 50,
       category: "Movie, Branding",
       description: "We'd like to continue to make a high quality audio show that takes listeners behind the scenes of children's literature.",
-      image: "https://www.crowdiego.com/images/feautured-projects-01.jpg", // Image URL for this project
-      rangeValue: 50, // Initial range value
+      image: "/images/bg-prof-01.jpg", // Image URL for this project
+      
+    // image: "url('/images/slider-bottom-bg.jpg')",rangeValue: 50, // Initial range value
     },
     {
       id: 2,
@@ -29,7 +30,7 @@ const Cards = () => {
       progress: 50,
       category: "Tech, Art",
       description: "This project brings art and technology together to showcase the beauty of Kyoto.",
-      image: "https://www.crowdiego.com/images/feautured-projects-02.jpg", // Image URL for this project
+      image: "/images/bg-prof-02.jpg", // Image URL for this project
       rangeValue: 50, // Initial range value
     },
     {
@@ -40,7 +41,7 @@ const Cards = () => {
       progress: 50,
       category: "Games, Entertainment",
       description: "A new game where players can go on thrilling adventures through beautiful landscapes.",
-      image: "https://www.crowdiego.com/images/feautured-projects-03.jpg", // Image URL for this project
+      image: "/images/bg-prof-03.jpg", // Image URL for this project // Image URL for this project
       rangeValue: 50, // Initial range value
     },
   ];

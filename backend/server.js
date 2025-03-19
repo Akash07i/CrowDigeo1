@@ -16,6 +16,25 @@ const app = express();
 
 // Enable CORS and JSON body parsing
 app.use(cors());
+
+
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000', // Localhost (if needed)
+      'https://7de1-2401-4900-88ca-c257-68a8-f9cc-74c7-c2a4.ngrok-free.app', // Replace with the actual Ngrok URL for frontend
+      'https://b2d4-2401-4900-88ca-c257-68a8-f9cc-74c7-c2a4.ngrok-free.app',  // Replace with the actual Ngrok URL for backend
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+);
+
+
+app.options('*', cors());
+
+
 app.use(bodyParser.json());
 
 // Ensure the 'uploads' folder exists

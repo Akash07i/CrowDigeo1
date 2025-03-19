@@ -173,7 +173,7 @@ function CustomNavbar() {
         {/* Logo Section */}
         <Navbar.Brand href="#home">
           <img
-            src="https://www.crowdiego.com/images/logo.png"
+            src="/images/logo-orange.png"
             alt="Crowdiego Logo"
             style={{ width: '120px', height: 'auto' }}
           />
@@ -236,9 +236,10 @@ function CustomNavbar() {
                       <strong>Welcome, {userProfile.name}!</strong>
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item as={Link} to="/Switch to Ideator">Switch to Ideator</Dropdown.Item>
-                    <Dropdown.Item as={Link} to="/Switch to Booster">Switch to Booster</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/dashboard">Dashboard</Dropdown.Item>
+                    {/* <Dropdown.Item as={Link} to="/Switch to Pusher">Switch to Pusher</Dropdown.Item>
                     <Dropdown.Item as={Link} to="/Switch to backer">Switch to backer</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/Switch to Maker">Switch to Macker</Dropdown.Item> */}
                     <Dropdown.Divider />
                     <Dropdown.Item as="button" onClick={handleLogout} className="text-danger">
                       Logout
